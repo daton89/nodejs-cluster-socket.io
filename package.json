@@ -2,8 +2,9 @@
   "name": "nodejs-cluster-socket.io",
   "version": "1.0.0",
   "description": "Make node.js cluster with socket.io and redis",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
+    "start": "pm2 start server/index.js --watch server && pm2 logs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,5 +20,9 @@
     "farmhash": "^2.0.5",
     "socket.io": "^2.0.4",
     "socket.io-redis": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "pm2": "^2.10.1"
   }
 }
